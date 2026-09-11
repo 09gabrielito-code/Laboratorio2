@@ -4,24 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-        input:required:invalid {
-            border: 1px solid red;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2em;
         }
+
+        form {
+            background-color: #ffffff;
+            padding: 2.5em;
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+            max-width: 400px;
+            width: 100%;
+            border-top: 6px solid #3498db;
+        }
+
+        div {
+            margin: 1em 0;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5em;
+            font-size: 0.95em;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.9em 1em;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        input:required:invalid {
+            border-color: #e74c3c;
+            background-color: #fdf0ef;
+        }
+
         input:required:valid {
-            border: 1px solid green;
+            border-color: #27ae60;
+            background-color: #f0faf4;
         }
     </style>
 </head>
 <body>
 
     <form>
-    <div style="margin:1em">
-        <label for="week1">Enter week1</label><br />
-        <!--<input type="week" id="week1" name="week1" value="2024-W25" placeholder="Choose week"/> -->
-        <input type="email" id="email1" name="email1" value="" placeholder="Enter email" required />
-    </div>
+        <div>
+            <label for="week1">Enter week1</label><br />
+            <!--<input type="week" id="week1" name="week1" value="2024-W25" placeholder="Choose week"/> -->
+            <input type="email" id="email1" name="email1" value="" placeholder="Enter email" required />
+        </div>
     </form>
 
 </body>
